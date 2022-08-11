@@ -61,7 +61,7 @@ model.add(Dense(94, activation="softmax"))
 model.compile(loss="categorical_crossentropy", optimizer="adam", metrics=["accuracy"])
 
 # Training the model
-model.fit(datagen.flow(X, Y, batch_size=97), validation_data=(X, Y), epochs=100, verbose=1)
+model.fit(datagen.flow(X, Y, batch_size=97), validation_data=(X, Y), epochs=sys.argv[2], verbose=1)
 
 # Saving the model
 model.save('model1')
